@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2 Parent Traversing</title>
+	<script type="text/javascript" src="javascript.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			  $("#b1").click(returnParent);
+		});
+
+		function returnParent()
+		{
+			$("span").parent().css({"border":"2px solid red","color" : "red"});
+		}
+	</script>
+	<style type="text/css">
+		.ancestors *
+		{
+			display: block;
+			color: lightgrey;
+			border : 2px solid lightgrey;
+			padding: 5px;
+			margin: 15px;
+		}
+	</style>
+</head>
+<body bgcolor="#c0c0c0">
+<div class="ancestors">
+       <div style="width: 500px;">div (great-grandparent)
+         <ul>ul (grandparent)
+           <li>li parent
+              <span>span</span>
+           </li>
+         </ul>
+       </div>
+
+       <div style="width: 500px;">div grandparent
+            <p>p parent 
+               <span>span</span>
+            </p>
+       </div>      
+</div>
+
+<button id="b1">Click to show parent</button>
+</body>
+</html>

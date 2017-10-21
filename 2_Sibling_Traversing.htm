@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2 Sibling Traversing</title>
+	<script src="javascript.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+             $("#b1").click(showSiblings)
+		});
+
+		function showSiblings()
+		{
+			$("h2").siblings("p").css({"border" : "2px solid red" , "color" : "red"});
+		}
+	</script>
+	<style type="text/css">
+		.Sibling *
+		{
+			display: block;
+			padding: 5px;
+			border: 2px solid lightgrey;
+            margin: 15px;
+            color: lightgrey;
+		}
+	</style>
+</head>
+<body class="Sibling" bgcolor="#c0c0c0">
+<div >
+ div - (parent)
+ <p>p</p>
+ <span>span </span>
+   	<h2>h2</h2>
+   	<h3>h3</h3>
+   	<p>p</p>
+</div>
+<button id="b1">Click to see siblings of h2</button>
+
+</body>
+</html>

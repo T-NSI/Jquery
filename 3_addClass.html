@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3 Add Class</title>
+	<script type="text/javascript" src="javascript.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+             $("#b1").click(function(){
+                 $("h1, h2, p").addClass("blue");
+                 $("#div1").addClass("important");
+             });
+
+             $("#b2").click(function(){
+                  $("#div2").addClass("important  blue");
+             });
+		});
+	</script>
+	<style type="text/css">
+		.important
+		{
+			font-size: xx-large;
+			font-weight: bold;
+		}
+
+		.blue
+		{
+			color: blue;
+		}
+	</style>
+</head>
+<body bgcolor="#c0c0c0">
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<p>This is a paragraph</p>
+<p>This is another paragraph</p>
+<div id="div1">This is div1</div>
+<br>
+<button id="b1">Add Class to above elements</button>
+<br><hr><br><hr>
+<div id="div2">This is div2</div>
+<div id="div3">This is div3</div>
+<br>
+<button id="b2">Add Class to div2</button>
+</body>
+</html>

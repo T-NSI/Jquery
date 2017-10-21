@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2 next prev until</title>
+	<script type="text/javascript" src="javascript.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+           $("#b1").click(next_prev_until);
+		});
+
+
+		function next_prev_until()
+		{
+			alert("hi");
+			$("h3").nextUntil("h6").css({"border" : "2px solid red" , "color" : "red"});
+			$("h3").prevUntil("p").css({"border" : "2px solid blue" , "color" : "blue"});
+		}
+
+	</script>
+	<style type="text/css">
+		.siblings *
+		{
+			display: block;
+			padding: 5px;
+			border: 2px solid lightgrey;
+			margin: 15px;
+			color: lightgrey;
+		}
+	</style>
+</head>
+<body bgcolor="#c0c0c0" class="siblings">
+<div>
+	div - (parent)
+	<p>p</p>
+	<span>span</span>
+	<h2>h2</h2>
+	<h3>h3</h3>
+	<h4>h4</h4>
+	<h5>h5</h5>
+	<h6>h6</h6>
+	<p>p</p>
+</div>
+<button id="b1">Click to see siblings</button>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>4 FInd Traversing</title>
+	<script type="text/javascript" src="javascript.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+            $("#b1").click(findChild);
+		});
+
+		function findChild()
+		{
+			$("div").find("span").css({"border" : "2px solid red" , "color" : "red"});
+		}
+	</script>
+	<style type="text/css">
+		.descendants *
+		{
+			display: block;
+			padding: 5px;
+			border: 2px solid lightgrey;
+			margin: 15px;
+			color: lightgrey;
+		}
+	</style>
+</head>
+<body bgcolor="#c0c0c0">
+<div class="descendants">
+	div - (current element)
+	<p>
+		p - (child)
+		<span>
+			span - (grandchild)
+		</span>
+	</p>
+
+	<p>
+		p - (child)
+		<span>
+			span - (grandchild)
+		</span>
+	</p>
+</div>
+
+<button id="b1">Click to find child</button>
+
+</body>
+</html>

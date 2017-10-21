@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>2 Remove Toggle Class</title>
+   <script type="text/javascript" src="javascript.js"></script>
+   <script type="text/javascript">
+   	$(document).ready(function(){
+          $("#b1").click(function(){
+              $("h1, h2, p").toggleClass("important blue");
+          });
+
+          $("#b2").click(function(){
+                $("h1, h2, p").removeClass("important blue");	
+          }); 
+   	});
+   </script>
+	<style type="text/css">
+		.important
+		{
+			font-size: xx-large;
+			font-weight: bold;
+		}
+
+		.blue
+		{
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+<h1 class="important blue">Heading 1</h1>
+<h2 class="important  blue">Heading 2</h2>
+<p class="important blue">This is a paragraph</p>
+<p class="important blue">This is another paragraph</p>
+<button id="b1">Toggle Class</button>
+<button id="b2">Remove Class</button>
+</body>
+</html>

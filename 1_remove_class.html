@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#b1").click(function(){
+        $("p").remove(".test");
+    });
+
+     $("#b2").click(function(){
+        $("p").remove(".test1, .demo1");
+    });
+});
+</script>
+<style>
+.test {
+    color: red;
+    font-size: 20px;
+}
+
+.test1 {
+    color: red;
+    
+    font-size: 20px;
+}
+
+.demo1 {
+    color: green;
+    font-size: 25px;
+}
+</style>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<p class="test">This is p element with class="test".</p>
+<p class="test">This is p element with class="test".</p>
+
+<button id="b1">Remove all p elements with class="test"</button>
+<br><hr><br><hr>
+
+<p>This is a paragraph.</p>
+<p class="test1">This is p element with class="test1".</p>
+<p class="test1">This is p element with class="test1".</p>
+<p class="demo1">This is p element with class="demo1".</p>
+
+<button id="b2">Remove all p elements with class="test1" and class="demo2	"</button>
+
+
+</body>
+</html>

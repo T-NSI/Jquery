@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.descendants * { 
+    display: block;
+    border: 2px solid lightgrey;
+    color: lightgrey;
+    padding: 5px;
+    margin: 15px;
+}
+</style>
+<script src="javascript.js"></script>
+<script>
+$(document).ready(function(){
+     $("#b1").click(findChild);
+    
+});
+
+function findChild()
+{
+  $("div").find("span").css({"color": "red", "border": "2px solid red"});}
+</script>
+</head>
+<body>
+
+<div class="descendants">
+  div (current element) 
+  <p>p (child)
+    <span>span (grandchild)</span>     
+  </p>
+  <p>p (child)
+    <span>span (grandchild)</span>
+  </p> 
+</div>
+<button id="b1">Click to find child</button>
+
+</body>
+</html>

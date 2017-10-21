@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>5 NextAll PrevAll Traversing</title>
+	<script src="javascript.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+            $("#b1").click(show_nextAll);
+		});
+
+		function show_nextAll()
+		{
+			alert("hi");
+			$("h2").nextAll().css({"border" : "2px solid red" , "color" : "red"});
+			show_prevAll();
+		}
+
+		function show_prevAll()
+		{
+			$("h2").prevAll().css({"border" : "2px solid red" , "color" : "blue"});
+		}
+	</script>
+	<style type="text/css">
+		.siblings *
+		{
+			display: block;
+			padding: 5px;
+			border: 2px solid lightgrey;
+			margin: 15px;
+			color: lightgrey;
+		}
+	</style>
+</head>
+<body bgcolor="#c0c0c0" class="siblings">
+<div>
+	div - (parent)
+	<p>p</p>
+	<span>span</span>
+	<h2>h2</h2>
+	<h3>h3</h3>
+	<p>p</p>
+</div>
+
+<button id="b1">Click to see siblings</button>
+
+
+</body>
+</html>

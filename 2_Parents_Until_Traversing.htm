@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2 Parents Until Traversing</title>
+	<script type="text/javascript" src="javascript.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+              $("#b1").click(showParentsUntil);
+		});
+
+		function showParentsUntil()
+		{
+			$("span").parentsUntil("div").css({"border" : "2px solid red" , "color" : "red"});
+		}
+	</script>
+	<style type="">
+		.ancestors *
+		{
+			display: block;
+			border: 2px solid lightgrey;
+			color: lightgrey;
+			padding: 5px;
+			margin: 15px;
+		}
+	</style>
+</head>
+<body class="ancestors" bgcolor="#c0c0c0">
+
+body - (great great grandparent)
+<div>
+	div - (great grandparent)
+	<ul>
+		ul - (grandparent)
+		<li>
+			li - (parent)
+			<span>
+				span
+			</span>
+		</li>
+	</ul>
+</div>
+
+<button id="b1">Click to see parents</button>
+</body>
+</html>

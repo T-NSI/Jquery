@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2 Outer True Height Width</title>
+	<script type="text/javascript" src="javascript.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+              $("#b1").click(returnOuterHW);
+		});
+
+		function returnOuterHW()
+		{
+			var txt = "";
+			txt += "width of div : " + $("#d1").width() + "<br>";
+			txt += "height of div : " + $("#d1").height() + "<br>";
+			txt += "outerHeight(including margin) of div : " + $("#d1").outerHeight(true) + "<br>";
+			txt += "outerWidth(including margin) of div : " + $("#d1").outerWidth(true) ;
+			$("#d1").html(txt); 
+		}
+	</script>
+	<style type="text/css">
+		#d1
+		{
+			width: 300px;
+			height: 100px;
+			padding: 10px;
+			border: 10px;
+			margin: 3px;
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body bgcolor="#c0c0c0">
+<div id="d1"></div>
+<br>
+<button id="b1">Display width and height of div(including padding,border and margin</button>
+<br>
+<br>
+<p>outerWidth(true) - returns width of div(including padding , border and margin)</p>
+<p>outerHeight(true) - returns height of div(including padding , border and margin)</p>
+
+</body>
+</html>

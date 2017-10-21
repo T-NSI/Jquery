@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3 Remove Empty</title>
+	<script type="text/javascript" src="javascript.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+               $("#b1").click(function(){
+                     $("#div1").remove();
+               });
+
+               $("#b2").click(function(){
+                      $("#div2").empty();
+               });
+		});
+	</script>
+	<style type="text/css">
+		.div_color
+		{
+			width: 300px;
+			height: 100px;
+			background-color: yellow;
+			border : 1px solid black;
+		}
+	</style>
+</head>
+<body bgcolor="#c3c3c3c3">
+
+<div id="div1" class="div_color">
+This is some text in a div
+<p>This is a paragraph in this div</p>
+<p>This is a another paragraph in this div</p>
+</div>
+
+
+<br>
+
+
+<button id="b1">Empty Elements</button>
+
+<hr><br><hr><br>
+
+
+<div id="div2" class="div_color">
+This is a some text in a div
+<p>This is a paragraph in this div</p>
+<p>This is another paragraph in this div</p>	
+</div>
+
+<br>
+
+<button id="b2">Remove Elements</button>
+</body>
+</html>

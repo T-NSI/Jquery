@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2 Children Traversing</title>
+	<script type="text/javascript" src="javascript.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+              $("#b1").click(showChildren);
+		});
+
+		function showChildren()
+		{
+			$("div").children().css({"border" : "2px solid red" , "color" : "red"});
+		}
+	</script>
+	<style type="">
+		.decendants *
+		{
+			display: block;
+			border: 2px solid lightgrey;
+			color: lightgrey;
+			padding: 5px;
+			margin: 15px;
+		}
+	</style>
+</head>
+<body bgcolor="#c0c0c0">
+<div class="decendants">
+div - current element
+  <p>
+  	p - (child)
+  	<span>
+  		span - (grandchild)
+  	</span>
+  </p>
+
+  <p>
+  	p - (child)
+  	<span>
+  		span - (grandchild)
+  	</span>
+  </p>
+	
+</div>
+<button id="b1">Clik to show children</button>
+
+</body>
+</html>

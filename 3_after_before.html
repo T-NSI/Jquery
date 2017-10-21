@@ -1,0 +1,23 @@
+<htm>
+<head>>
+	<title>3 after before</title>
+	<script type="text/javascript" src="javascript.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+           $("#b1").click(function(){
+                $("img").before("<b>Insert Before <i>Rajiv Mishra</i></b>");
+           });
+
+           $("#b2").click(function(){
+                 $("img").after("<b>Insert After <i>Rajiv Mishra</i></b>");
+           });
+	 });
+	</script>
+</head>
+<body bgcolor = #c3c3c3c3>
+	<p>This is a paragraph and the target needs to be completed</p>
+	<img src="/home/t-nsi/Downloads/It-Is-Not-Truth-That-Matters-But-Victory.-Adolf-Hitler.jpg" alt="Hitler" width = "400px" height="200px"><br><br>
+	<button id="b1">Insert Before</button>
+	<button id="b2">Insert After</button>
+</body>
+</htm>
